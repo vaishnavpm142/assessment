@@ -1,0 +1,42 @@
+
+
+    
+    <form action="loginaction" method="POST">
+        {% csrf_token %}
+        <br>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <center><p><b>Login / Sign-Up</b></p></center>
+           <center> <div class="form-group">
+                <label for="username">Username: </label>
+                {{form.username}}
+            </div></center>
+            
+           <center> <div class="form-group">
+                <label for="password">Password: </label>
+                {{form.password}}
+            </div></center>
+        <center>
+            <button type="submit" class="btn btn-primary">Sign-In</button> 
+            New User? <a href="signup" class="btn btn-danger">Sign-Up</a><br>
+        </center>
+            <div style="background-color: yellow;">{{errmsg}}</div>
+            </div>
+            <div class="col-md-3" style="text-align: justify;text-justify: inter-word;">
+            
+                
+            </div>
+            <div class="col-md-3" style="text-align: justify;text-justify: inter-word;">
+             
+                
+            </div>
+            <div class="col-md-3" style="text-align: justify;text-justify: inter-word;">
+        
+            </div>
+            
+        </div>
+
+</form>

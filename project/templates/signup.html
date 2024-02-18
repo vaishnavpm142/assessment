@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<h1>SignUp</h1>
+    <form method="POST" class="post-form" action="signupaction">
+        {% csrf_token %}
+        <table class="table table-striped table-bordered table-sm" style="width: 50%">
+            
+            <tr>
+
+                <td>UserName:</td>
+                <td><input type="text" name="txtusername" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="txtpassword" class="form-control" required></td>
+            </tr>
+
+            <tr>
+                <td>FirstName:</td>
+                <td><input type="text" name="txtfirstname" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>LastName:</td>
+                <td><input type="text" name="txtlastname" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" name="txtaddress" class="form-control" required></td>
+            </tr>
+            
+            <tr>
+                <td>Mobile:</td>
+                <td><input type="text" name="txtmobile" pattern="[0-9]{10}" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="txtemail" class="form-control" required></td>
+            </tr>
+             <tr>
+                <td>Field:</td>
+                <td><input type="text" name="txtbranch" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" class="btn btn-success">Register</button>{{errmsg}}
+                    <a href="/" class="btn btn-primary">Home</button>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div style="background-color: green;">&nbsp;</div>
+    </div>
+</body>
+</html>
